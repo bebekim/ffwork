@@ -1,0 +1,22 @@
+<div id="<%= dom_id employer %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= employer.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Category:</strong>
+    <%= employer.category %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Certified year:</strong>
+    <%= employer.certified_year %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this employer", employer, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this employer', edit_employer_path(employer), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
